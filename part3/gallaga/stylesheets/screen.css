@@ -1,0 +1,107 @@
+body {
+	-webkit-font-smoothing: antialiased;
+	background: #000;
+	color: rgb(255, 255, 0);
+	font-family: sans-serif;
+	font-weight: bold;
+	text-align: center;
+	font-family: 'Cinzel', serif;
+}
+
+a {
+	color: #66cccc;
+}
+
+#canvas-wrapper {
+	-webkit-animation: scroll 30s linear infinite;
+	-moz-animation: scroll 30s linear infinite;
+	animation: scroll 30s linear infinite;
+	background: url(../images/stars.png);
+	overflow: hidden;
+	position: relative;
+	border-radius: 5px;
+	width: 1200px;
+	height: 675px;
+	margin: auto;
+	margin-top: 20px;
+}
+
+p{
+	font-size: 20px;
+	letter-spacing: 5px;
+}
+
+canvas {
+	-webkit-animation: scroll 30s linear infinite;
+	-moz-animation: scroll 30s linear infinite;
+	animation: scroll 30s linear infinite;
+	background: url(../images/stars-2.png);
+	border-radius: 5px;
+	position: relative;
+}
+
+/* body:blur {
+	-webkit-animation-play-state: paused;
+	-moz-animation-play-state: paused;
+	animation-play-state: paused;
+} */
+
+@-webkit-keyframes scroll {
+  0%   { background-position: 0 0; }
+  100% { background-position: 0 637px; }
+}
+
+
+
+
+/* The Modal (background) */
+.modal {
+  /* display: none; Hidden by default */
+  opacity: 0;
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display:block;
+  margin:auto;
+  width: 0%; /* Full width */
+  height: 0%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0, .5); /* Fallback color */
+  transition: all 0.5s;
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-image: url('../../../img/backgrounds/dementors.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  margin: 5% auto; /* 15% from the top and centered */
+  padding: 10px;
+  border: 6px solid #888;
+  width: 50%; /* Could be more or less, depending on screen size */
+  height:50%;
+  display:flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+
+.modal-content p{
+	margin: 20px;
+	font-size: 30px;
+	font-weight: bold;
+}
+
+.modal-content a{
+	color: rgb(255, 255, 0);
+}
+
+.modal.open {
+  opacity: 1;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+}

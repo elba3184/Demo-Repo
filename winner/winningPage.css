@@ -1,0 +1,110 @@
+body{
+    background-image: url('../img/backgrounds/background6.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+    background-position-y: 0%;
+    font-family: "harry_pregular";
+    background-color: black;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+
+.glow {
+    font-family: "harry_pregular";
+    font-size: 80px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
+    margin: 85px 20px;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ff0000, 0 0 40px #ff0000, 0 0 50px #ffff00, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #c94118, 0 0 40px #c94118, 0 0 50px #c94118, 0 0 60px #4da0ff, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+  #trophy-div{
+    margin: 40px;
+  }
+
+  #trophy-div .rotate{
+    height: 50px;
+  }
+
+  #tropy-div .dumbledore {
+    height: 40%;
+    width: 40%;
+  }
+
+  .rotate {
+    height: 50px;
+    animation: rotation 2s infinite linear;
+    animation-direction: alternate-reverse;
+  }
+  
+  @keyframes rotation {
+    from {
+      transform: rotate(-10deg);
+    }
+    to {
+      transform: rotate(10deg);
+    }
+  }
+
+
+  #characters-div{
+    width: 100%;
+    display:flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    margin: 50px 10px;
+  }
+
+
+  #characters-div img{
+    height: 60px;
+  }
+
+  #characters-div img:hover{
+    height: 100px;
+  }
+
+  .names {
+    font-size: 30pt;
+    color: white;
+  }
+  .names li{
+    text-align: inline;
+    font-size: 30pt;
+    color: white;
+  }
+
+a {
+  border: 1px solid red;
+  padding: 10px;
+  border-radius: 10px;
+  width: 180px;
+  background: transparent;
+  color: red;
+  letter-spacing: 4px;
+  -webkit-animation-name: yellowPulse;
+  -webkit-animation-duration: 1s;
+  -webkit-animation-iteration-count: infinite;
+  text-align: center;
+}
+
+@-webkit-keyframes yellowPulse {
+  from { background-color: rgba(191, 191, 1, .1); -webkit-box-shadow: 0 0 9px #333; }
+  50% { background-color: rgba(255, 255, 0, .1); -webkit-box-shadow: 0 0 18px #ffff00; }
+  to { background-color: rgba(191, 191, 1, .1); -webkit-box-shadow: 0 0 9px #333; }
+}

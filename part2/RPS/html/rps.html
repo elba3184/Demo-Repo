@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel = "stylesheet" type = "text/css" href = "../css/main.css"/>
+    <!-- <link rel = "stylesheet" type = "text/css" href = "rps.scss"/> -->
+    <link href="../../../img/icons-&-items/favicon.ico" rel="icon" type="image/x-icon" />
+    <!-- <link rel="stylesheet" href="specimen_files/specimen_stylesheet.css" type="text/css" charset="utf-8" /> -->
+    <link rel="stylesheet" href="../css/stylesheet.css" type="text/css" charset="utf-8" />
+    <title>Spell Attack</title>
+</head>
+
+<body>
+        <div class="stars"></div>
+        <div class="twinkling"></div>
+        <div class="clouds"></div>
+<!-- STARTING SCREEN -->
+<header class="main-header">
+    <div class="container">
+        <h1>
+            <span>Defense Against The Dark Arts</span>
+        </h1>
+        <p class="intro">An epic battle between young, couragous wizards and an unrivaled Dark Lord and his deatheaters</p>
+
+    </div>
+
+    <div class="starter-screens">
+        <!-- START -->
+        <div class="starter-screen start">
+            <div class="medium-container">
+                <button class="start button">Begin Battle</button>
+            </div>
+        </div>
+
+        <!-- HOW MANY ROUNDS -->
+        <div class="starter-screen choose-rounds">
+
+            <div class="medium-container">
+
+                <h2>Are you ready for a showdown???</h2>
+
+                <ul>
+                    <li class="button" data-rounds="3" role="button"><span>Wand 1</span></li>
+                    <li class="button" data-rounds="5" role="button"><span>Wand 2</span></li>
+                    <li class="button" data-rounds="9" role="button"><span>Wand 3</span></li>
+                    <li class="button" data-rounds="15" role="button"><span>Wand 4</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="starter-screen choose-character">
+            <div class="medium-container">
+                <h2>Choose your character</h2>
+                <ul>
+                    <li role="button" class="character1" data-character="character1"><span>Harry</span></li>
+                    <li role="button" class="character2" data-character="character2"><span>Ron</span></li>
+                    <li role="button" class="character3" data-character="character3"><span>Hermione</span></li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- CHARACTERS -->
+        <div class="starter-screen choose-rival">
+
+            <div class="medium-container">
+
+                <h2>Choose your rival:</h2>
+
+                <ul>
+                    <li role="button" class="comp1" data-character="comp1"><span>Voldermort</span></li>
+                    <li role="button" class="comp2" data-character="comp2"><span>Bellatrix</span></li>
+                    <li role="button" class="comp3" data-character="comp3"><span>Lucius</span></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</header>
+
+<main>
+
+    <div class="container container-collapse">
+
+        <div class="play-area">
+
+            <!-- PLAYER & COMPUTER ICON -->
+            <div class="players">
+
+                <div class="player-info">
+                    <div class="player-character"></div>
+                    <p>Score: <span class="player-score">0</span></p>
+                </div>
+
+                <span>Vs.</span>
+
+                <div class="player-info">
+                    <div class="computer-character"></div>
+                    <p>Score: <span class="computer-score">0</span></p>
+                </div>
+
+            </div>
+
+            <!-- ROUND -->
+            <div class="round-wrap">
+                <p>Round: <span class="round">1</span>/<span class="best-of"></span></p>
+            </div>
+
+            <!-- PLAY ARENA -->
+            <div class="arena">
+
+                <div class="player-chip">
+                    <h3 z-index: -1>Your choice</h3>
+                    <span class="player-choice"></span>
+                    <div class="player-choice-icon"></div>
+                </div>
+
+                <div class="computer-chip">
+                    <h3>Enemy's choice</h3>
+                    <span class="computer-choice"></span>
+                    <div class="computer-choice-icon"></div>
+                </div>
+
+                <!-- CHOOSE WEAPON -->
+                <div class="weapon">
+
+                    <div class="weapon-inner">
+
+                        <h3>Choose your weapon</h3>
+                        <canvas id="canvas"></canvas>
+                        
+                        <ul>
+                            <!-- <button id="toggle-info" style="position:fixed; position:absolute; top: 25%; right:50%; z-index:99;" onclick="infoButtonClick()">
+                                I AM A BUTTON
+                            </button> -->
+                            <li class="rock" role="button" data-weapon="rock" onclick="infoButtonClick1()"><span>Serpensortia</span></li>
+                            <li class="paper" role="button" data-weapon="paper" onclick="infoButtonClick2()"><span>Incendio</span></li>
+                            <li class="scissors" role="button" data-weapon="scissors" onclick="infoButtonClick3()"><span>Imperio</span></li>
+                        </ul>
+
+                    </div>
+
+                </div>
+
+                <!-- ROUND RESULTS -->
+                <div class="result">
+
+                    <div class="result-inner">
+
+                        <h3 class="winner"></h3>
+                        <button id='play-again-btn' class="play-again button">Play again</button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+</main>
+
+<!-- END SCREEN -->
+<section class="end-screen">
+
+    <div class="medium-container">
+
+        <div class="end-result"></div>
+
+        <div class="rounds-end-screen">
+
+            <h3>Would you like a rematch? How many rounds do you want to play?</h3>
+
+            <ul>
+                <li class="button rounds-3" data-rounds="3" role="button"><span>3</span></li>
+                <li class="button rounds-5" data-rounds="5" role="button"><span>5</span></li>
+                <li class="button rounds-9" data-rounds="9" role="button"><span>9</span></li>
+                <li class="button rounds-15" data-rounds="15" role="button"><span>15</span></li>
+            </ul>
+
+        </div>
+        <button class="reset button">Rematch</button>
+    </div>
+
+</section>
+
+<!-- The Modal -->
+<div id="myModal" class="modal">
+
+    <!-- Modal content -->
+    <div id='modal-type' class="modal-content">
+    </div>
+
+</div>
+
+
+
+
+<script
+  src="https://code.jquery.com/jquery-3.4.1.js"
+  integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+  crossorigin="anonymous"></script>
+<script src="../javascript/game.js"></script>
+    
+</body>
+</html>

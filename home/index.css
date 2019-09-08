@@ -1,0 +1,209 @@
+body{
+    font-family: Apple-chancery;
+    background-image: url('../img/backgrounds/background4.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+
+
+.glow {
+    font-family: "harry_pregular";
+    font-size: 140px;
+    color: #fff;
+    text-align: center;
+    -webkit-animation: glow 3s ease-in-out infinite alternate;
+    -moz-animation: glow 3s ease-in-out infinite alternate;
+    animation: glow 3s ease-in-out infinite alternate;
+    margin: 20px;
+    letter-spacing: 4px;
+  }
+  
+  @-webkit-keyframes glow {
+    from {
+      text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #ffff00, 0 0 40px #ffff00, 0 0 50px #ffff00, 0 0 60px #e60073, 0 0 70px #e60073;
+    }
+    to {
+      text-shadow: 0 0 20px #fff, 0 0 30px #4da0ff, 0 0 40px #4da0ff, 0 0 50px #4da0ff, 0 0 60px #4da0ff, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+    }
+  }
+
+#myBtn{
+    padding: 0;
+    margin: 0;
+    border-radius: 20px;
+    background: transparent;
+    border: transparent;
+    margin: 30px;
+}
+#myBtn img{
+    width: 300px;
+}
+
+
+#myBtn:focus {
+    outline:none;
+}
+
+
+.zoom {
+    transition: transform .2s; /* Animation */
+  }
+  
+  .zoom:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+  }
+
+
+#footies{
+    font-size: 13pt;
+    position: relative;
+    margin: 0 20px;
+}
+
+
+
+
+.modal {
+    /* display: none; Hidden by default */
+    opacity: 0;
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    display:block;
+    margin:auto;
+    width: 0%; /* Full width */
+    height: 0%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0,0,0, .5); /* Fallback color */
+    transition: all 0.4s;
+  }
+  .modal.open {
+      opacity: 1;
+      width: 100%; /* Full width */
+      height: 100%; /* Full height */
+  }
+/* Modal Content/Box */
+.modal-content {
+    background-image: url('../img/backgrounds/old-paper.png');
+    background-repeat: no-repeat;
+    background-size: 110%;
+    margin: 10% auto; /* 15% from the top and centered */
+    padding: 15px;
+    border: 1px solid #888;
+    width: 65%; /* Could be more or less, depending on screen size */
+    /* height: 100%; */
+}
+  
+/* The Close Button */
+.close {
+    color: #aaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+  
+.close:hover, .close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+
+#map{
+    width: 95%;
+    display:flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.map-icon{
+    margin: 90px 10px;
+    width: 100px;
+    opacity: .75;
+}
+
+#writing h1{
+    font-size: 17pt;
+}
+
+.arrow{
+    height: 20px;
+
+}
+
+#writing{
+    block-size: 100%;
+    margin: 22px;
+}
+
+#welcome{
+    font-weight: 900;
+    font-size: 25pt;
+}
+#writing li{
+    list-style-image: url("https://www.google.com/url?sa=i&source=images&cd=&ved=2ahUKEwikgNT3nsHkAhUGd98KHfqKBWoQjRx6BAgBEAQ&url=https%3A%2F%2Fwww.sccpre.cat%2Fshow%2FJiomwh_harry-potter-wands-png-transparent-background-harry-potter%2F&psig=AOvVaw25dgfonPt4zM0TZ77MvB6I&ust=1568032638038402");
+}
+
+.albus-sign .signature{
+    display: flex;
+    justify-content: left;
+    margin-top: 30px;
+    width: 50%;
+    height: 30%;
+}
+
+#mischief-btn{
+    block-size: 100%;
+    margin: 10px;
+    display:flex;
+    justify-content: center;
+}
+
+#mischief-btn button{
+    background-color: rgba(255, 255, 255, .6);
+    border: 3px inset black;
+    margin-top: 35px;
+}
+
+
+
+#mischief-btn button:focus {
+    outline:none;
+}
+
+ .footprint{
+    z-index: 3;
+	opacity: 0;
+	animation-duration: 5s;
+	animation-name: fadeOut;
+	-moz-animation-duration: 5s;
+	-moz-animation-name: fadeOut;
+	-webkit-animation-duration: 5s;
+	-webkit-animation-name: fadeOut;
+}
+
+@keyframes fadeOut {
+	0%{opacity: 1;}
+	80%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+@-moz-keyframes fadeOut {
+	0%{opacity: 1;}
+	80%{opacity: 1;}
+	100%{opacity: 0;}
+}
+
+@-webkit-keyframes fadeOut {
+	0%{opacity: 1;}
+	80%{opacity: 1;}
+	100%{opacity: 0;}
+} 

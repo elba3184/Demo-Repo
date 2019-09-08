@@ -1,0 +1,195 @@
+
+body{
+    background-image: url('../img/backgrounds/hogwarts.jpg');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    padding: 0;
+    text-align: center;
+    margin: 15px;
+    overflow: hidden;
+    font-family: "harry_pregular";
+  }
+  
+.game-intro {
+    float: left;
+    width: 600px;
+    height: 600px;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-around;
+    margin: 50px;
+  }
+  
+.game-intro p {
+    margin-top: 20px;
+    font-size: 24px;
+    font-weight: bold;
+    color: rgb(255, 255, 0);
+    width: 85%;
+  }
+
+.character-talking{
+    display:flex;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    justify-content: center;
+    align-items: center
+  }
+
+.character-talking img {
+  width: 200px;
+  height: 200px;
+  margin-right: 140px;
+}
+
+.speech-bubble {
+    position: relative;
+    background: rgba(255, 255, 255, .7);
+    border-radius: 4em;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+    width:50%; 
+    height: 45%;
+    margin-left: 50px;
+    margin-bottom: 40px;
+   }
+
+.speech-bubble:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 40%;
+    width: 0.4%;
+    height: 20%;
+    border: 52px solid transparent;
+    border-top-color: rgba(255, 255, 255, .7);
+    border-bottom: 0;
+    border-left: 0;
+    margin-left: -15px;
+    margin-bottom: -52px;
+  }
+
+
+.speech-bubble p{
+    font-family: 'Cinzel', serif;
+    font-size: 15px;
+    font-style: italic;
+}
+ 
+.intro-div{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+
+@-webkit-keyframes yellowPulse {
+    from { background-color: #c7c701; -webkit-box-shadow: 0 0 9px #333; }
+    50% { background-color: #ffff00; -webkit-box-shadow: 0 0 18px #ffff00; }
+    to { background-color: #c7c701; -webkit-box-shadow: 0 0 9px #333; }
+}
+
+  
+#start-button{
+    font-size: 30px;
+    color: black;
+    padding: 20px 40px;
+    border: 3px outset black;
+    border-radius: 5px;
+    margin-bottom: 20px;
+    -webkit-animation-name: yellowPulse;
+    -webkit-animation-duration: 1s;
+    -webkit-animation-iteration-count: infinite;
+  }
+
+
+#start-button:focus {
+    outline:none;
+}
+  
+  #game-board {
+      float: left;
+      border: 3px solid black;
+      background-color: rgba(255, 255, 255, .5);
+      margin: 75px;
+  }
+  
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); 
+}
+
+/* Modal Content/Box */
+.modal-content {
+  background-color: white;
+  margin: 15% auto; /* 15% from the top and centered */
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%; /* Could be more or less, depending on screen size */
+  display:flex;
+  flex-direction: row;
+  align-items: center;
+}
+
+.modal-div{
+  display: flex;
+  flex-direction: column;
+  align-items:center; 
+  margin: 10px;
+  font-size: 35px;
+}
+
+.modal-content img{
+  padding: 20px;
+  width: 100%;
+}
+
+#quiz{
+  padding: 30px;
+  margin-left: 25px;
+  width: 70%;
+  font-size: 35px;
+}
+
+.option{
+  display:flex;
+  flex-direction: row;
+  margin: 10px;
+  align-items: center;
+  padding: 20px;
+  margin-left: 35px;
+  font-size: 30px
+  
+}
+
+/* The Close Button */
+.close {
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+
+
+body h1{
+  color: white;
+}

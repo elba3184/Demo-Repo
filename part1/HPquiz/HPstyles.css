@@ -1,0 +1,78 @@
+body {
+	color: #413D3D;
+	font-family: 'Cinzel', serif;
+	width: 95%;
+    text-align: center;
+    margin: 0 auto;
+    background-image: url('../../img/backgrounds/oldPaper.jpg');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+* {
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+
+h1{
+    margin: 80px;
+    color: black;
+}
+
+h2{
+    color: black;
+}
+ul {
+   list-style-type:none;
+    margin: 40px;
+   list-style:none;
+   padding:0;
+}
+
+li {
+  list-style:none;
+  margin: 25px;
+}
+
+button {
+      width: 260px;
+      font-size: 20px;
+      margin:12px 0;
+      padding: 10px 15px;
+      background-color: black;
+      color: #fff;
+      font-family: 'Cinzel', serif;
+	  -webkit-border-radius: 1000px;
+      border-radius: 1000px;
+      outline: none;
+      border: none;
+      font-style: italic;
+}
+
+
+button:focus {
+    outline:none;
+}
+
+button:active {
+      background-color: #95a5a6;
+}
+
+.correctStyle {
+      background-color: #2ecc71;
+}
+
+.incorrectStyle {
+      background-color: #e74c3c;
+}
+
+img {
+    border-radius: 50px;
+    border: 5px inset black;
+    margin: 20px;
+}
