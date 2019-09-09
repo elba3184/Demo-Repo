@@ -472,7 +472,8 @@ var gameModule = (function () {
         });
 
         // Play the game
-        $('.weapon li').on('click', function(e) {
+          // Play the game
+          $('.weapon li').on('click', function(e) {
 
             e.preventDefault();
             playerChoice = $(this).data('weapon');
@@ -494,13 +495,13 @@ var gameModule = (function () {
               overallWinner();
               console.log(overallWinner());
               if(overallResultClass == 'win'){
-                document.getElementById('modal-type').innerHTML += `<p>Good job! You won!</p><a href='../part3/part3.html'> Finish </a>`
+                document.getElementById('modal-type').innerHTML += `<p>Good job! You won!</p><a href='../../../part3/part3.html'> Finish </a>`
               }
               else if(overallResultClass == 'lose'){
-                document.getElementById('modal-type').innerHTML += `<p>Oh no! You lost!</p><a href='../part3/part3.html'> Finish </a>`
+                document.getElementById('modal-type').innerHTML += `<p>Oh no! You lost!</p><a href='../../../part3/part3.html'> Finish </a>`
               }
               else{
-                document.getElementById('modal-type').innerHTML += `<p>You tied with the computer!</p><a href='../part3/part3.html'> Finish </a>`
+                document.getElementById('modal-type').innerHTML += `<p>You tied with the computer!</p><a href='../../../part3/part3.html'> Finish </a>`
               }
               document.getElementById('modal-type').className = `modal-content ${overallResultClass}-result`
               setTimeout(function() { 
@@ -538,6 +539,14 @@ var gameModule = (function () {
 
         });
 
+//         function endGameRPS() {
+//             // var answer = confirm("You won!");
+//             // if (answer) {
+//                 window.open("../../../part3/index3.html", "_self");
+//             // }
+// //         }
+
+  
 //         function endGameRPS() {
 //             // var answer = confirm("You won!");
 //             // if (answer) {
