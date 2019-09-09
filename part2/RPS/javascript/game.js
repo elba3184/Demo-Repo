@@ -177,6 +177,14 @@ function infoButtonClick2() {
 
 //-------------------------------------------//
 
+let i, j;
+let userName, compName;
+var playerWinsText = `You win the round!`,
+    computerWinsText = `Villain wins the round!`,
+    tieText = "It's a Tie!",
+    overallPlayerWinText = "<h2>Well Done!</h2> <p>You won against the computer!</p>",
+    overallComputerWinText = "<h2>You Lose...</h2> <p>The computer has defeated you!</p>",
+    overallTieText = "<h2>It's a draw!</h2> <p>Good effort young wizard!</p>";
 var gameModule = (function () {
 
     $(function() {
@@ -199,10 +207,31 @@ var gameModule = (function () {
            // Set what character is chosen and start the game
            let user = "";
          userChar = $('.choose-character li').on('click', function(e) {
-
           e.preventDefault();
-          user = setCharacter($(this), '.player-character');
+          setCharacter($(this), '.player-character');
           nextScreen($(this));
+          console.log(this);
+  
+          let user = this.className;
+          if(this.className == 'character1'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(1)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/harry-wand.png'>`
+            userName = 'Harry';
+            i = 0;
+          }
+          else if(this.className == 'character2'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(1)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/ron-wand.png'>`
+            userName = 'Ron';
+            i=1;
+          }
+          else if(this.className == 'character3'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(1)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/hermione-wand.png'>`
+            userName = 'Hermione';
+            i = 2;
+          }
+          playerWinsText = `${userName} wins the round!`
+          overallTieText = `<h2>It's a draw!</h2> <p>Good effort ${userName}!</p>`;
+          overallTieText = `<h2>It's a draw!</h2> <p>Good effort ${userName}!</p>`;
+          
           return console.log(user);
       });
 
@@ -211,8 +240,31 @@ var gameModule = (function () {
       villianChar = $('.choose-rival li').on('click', function(e) {
 
           e.preventDefault();
-          villian = setCharacter($(this), '.computer-character');
+          setCharacter($(this), '.computer-character');
           $('body').addClass('game-started');
+
+
+          let villian = this.className;
+          if(this.className == 'comp1'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(3)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/voldemort.png'>`
+            compName = 'Voldemort'
+            j = 0;
+          }
+          else if(this.className == 'comp2'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(3)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/bellatrix.png'>`
+            compName = 'Bellatrix';
+            j=1;
+          }
+          else if(this.className == 'comp3'){
+            document.querySelector("body > main > div > div > div.players > div:nth-child(3)").innerHTML = `<img class='chosenPlayerImg' src='../../../img/characters/lucius.png'>`
+            compName = 'Lucius';
+            j = 2;
+          }
+          
+          computerWinsText = `${compName} wins the round!`,
+          overallPlayerWinText = `<h2>Well Done!</h2> <p>You won against ${compName}!</p>`,
+          overallComputerWinText = `<h2>You Lose...</h2> <p>${compName} has defeated you!</p>`
+
           return console.log(villian);
       });
 
@@ -228,12 +280,7 @@ var gameModule = (function () {
       //   villName = villianChar[i].innerText;
       // }
 
-        var playerWinsText = `You win the round!`,
-            computerWinsText = `Villian wins the round!`,
-            tieText = "It's a Tie!",
-            overallPlayerWinText = "<h2>Well Done!</h2> <p>You won against the computer!</p>",
-            overallComputerWinText = "<h2>You Lose...</h2> <p>The computer has defeated you!</p>",
-            overallTieText = "<h2>It's a draw!</h2> <p>Good effort young wizard!</p>";
+
 
         // Set Characters
         function setCharacter(div, className) {
@@ -501,7 +548,7 @@ var gameModule = (function () {
                 document.getElementById('modal-type').innerHTML += `<p>Oh no! You lost!</p><a href='../../../part3/part3.html'> Finish </a>`
               }
               else{
-                document.getElementById('modal-type').innerHTML += `<p>You tied with the computer!</p><a href='../../../part3/part3.html'> Finish </a>`
+                document.getElementById('modal-type').innerHTML += `<p>You tied with ${compName}!</p><a href='../../../part3/part3.html'> Finish </a>`
               }
               document.getElementById('modal-type').className = `modal-content ${overallResultClass}-result`
               setTimeout(function() { 
@@ -539,20 +586,6 @@ var gameModule = (function () {
 
         });
 
-//         function endGameRPS() {
-//             // var answer = confirm("You won!");
-//             // if (answer) {
-//                 window.open("../../../part3/index3.html", "_self");
-//             // }
-// //         }
-
-  
-//         function endGameRPS() {
-//             // var answer = confirm("You won!");
-//             // if (answer) {
-//                 window.open("../../../part3/index3.html", "_self");
-//             // }
-// //         }
 
     });
 

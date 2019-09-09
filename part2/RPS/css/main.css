@@ -361,28 +361,6 @@ animation:move-clouds-back 200s linear infinite;
   margin: -9px -40px -5px -40px;
 }
 
-/* .button1 {
-  display: inline-block;
-  margin: 0.5rem;
-  border-radius: 100%;
-  background-color: rgb(255, 255, 255, 0.4);
-  border: 5px solid #4284A4;
-  background-repeat: no-repeat;
-} */
-
-/* .button1:before, .button1:after,
-.button2:before, .button2:after,
-.button3:before, .button3:after,
-.button4:before, .button4:after {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  width: 51%;
-  height: 100%;
-  top: 0;
-  background-color: rgb(255, 255, 0);
-  transition: 0.4s ease-out all;
-} */
 
 .button1, .button2, .button3, .button4 {
   padding: 10px 20px;
@@ -458,7 +436,7 @@ animation:move-clouds-back 200s linear infinite;
 
 .win {
   background-color: rgba(0, 0, 0, .98);
-  border-top: 30px solid rgb(41, 85, 228, 0.98);
+  border-top: 30px solid rgb(51, 204, 51, .98);
   /* background-color: rgb(240, 197, 38, 0.98); */
 }
 
@@ -1013,9 +991,11 @@ h3 {
   PLAYERS
 ==========================================*/
 .players {
-  margin-bottom: 3rem;
+  margin-top: 3rem;
+  margin-bottom: 175px;
+  margin-right: 75px;
   display: flex;
-  justify-content: space-between;
+  justify-content: space-around;
   align-items: center;
   color: #333;
 }
@@ -1141,15 +1121,16 @@ a { color: #CCC }
 
 
 .win-result{
-  border: 2px solid green;
+
+  border: 4px solid rgb(51, 204, 51, .98);
 }
 
 .lose-result{
-  border: 2px solid red;
+  border: 4px solid rgb(122, 0, 0, 0.98);
 }
 
 .tie-result{
-  border: 2px solid yellow;
+  border: 4px solid rgb(240, 197, 38, 0.98);
 }
 
 /* Modal Content/Box */
@@ -1167,8 +1148,21 @@ a { color: #CCC }
   justify-content: space-around;
 }
 
+
+.modal-content p{
+  font-size: 50px;
+}
+
 .modal.open {
   opacity: 1;
   width: 100%; /* Full width */
   height: 100%; /* Full height */
+}
+
+
+
+.chosenPlayerImg{
+  position: fixed;
+  z-index: 90;
+  block-size: 100px;
 }

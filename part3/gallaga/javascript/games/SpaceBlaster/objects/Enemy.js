@@ -22,7 +22,7 @@ SpaceBlaster.Enemy = function(x, y, direction) {
 		}
 	};
 	this.set(properties);
-	this.destroySound = new Game.Sound('enemy-hit');
+	//this.destroySound = new Game.Sound('enemy-hit');
 	this.original = properties;
 };
 
@@ -31,7 +31,7 @@ SpaceBlaster.Enemy.prototype = new Game.Object();
 SpaceBlaster.Enemy.prototype.destroy = function() {
 	this.isHit = true;
 	this.vy = -200;
-	this.destroySound.play();
+	//this.destroySound.play();
 };
 
 SpaceBlaster.Enemy.prototype.drawType = function() {

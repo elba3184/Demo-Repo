@@ -20,7 +20,7 @@ SpaceBlaster.Ship.prototype.setDefaults = function() {
 	this.x = Game.canvas.width / 2 - this.width / 2;
 	this.y = Game.canvas.height - this.height - 25;
 	this.laserSound = new Game.Sound('laser');
-	this.explodeSound = new Game.Sound('explode');
+	//this.explodeSound = new Game.Sound('explode');
 
 	// User defineable settings
 	this.speed = this.speed || 300;
@@ -86,5 +86,5 @@ SpaceBlaster.Ship.prototype.drawType = function() {
 },
 
 SpaceBlaster.Ship.prototype.die = function() {
-	this.explodeSound.play();
+	//this.explodeSound.play();
 };
