@@ -9,7 +9,7 @@ https://mkrtchyan.ga
   padding: 0;
 }
 header {
-  background-color:rgba(33, 33, 33, 0.9);
+  background-color:rgba(33, 33, 33);
   color:#ffffff;
   display:block;
   font: 14px/1.3 Arial,sans-serif;
@@ -25,9 +25,9 @@ h2{
 }
 
 header h2{
-  font-size: 16px;
+  font-size: 30px;
   margin: 0 auto;
-  padding: 10px 0;
+  padding: 40px 0;
   width: 80%;
   text-align: center;
 }
@@ -225,7 +225,7 @@ animation:move-clouds-back 200s linear infinite;
     height: 100vh;
   }
   100% {
-    height: 3rem;
+    height: 50px;
   }
 }
 @-webkit-keyframes scale-text {
@@ -235,7 +235,7 @@ animation:move-clouds-back 200s linear infinite;
 }
 @keyframes scale-text {
   100% {
-    font-size: 2rem;
+    font-size: 35pt;
   }
 }
 @-webkit-keyframes bg {
@@ -251,7 +251,8 @@ animation:move-clouds-back 200s linear infinite;
     background-position: bottom -20rem center;
   }
   100% {
-    background-position: bottom -0.5rem center;
+    background-position: bottom 25px center;
+    background-size: 75%;
   }
 } 
 /*==========================================
@@ -300,9 +301,10 @@ animation:move-clouds-back 200s linear infinite;
   border: none;
   padding: 10px 40px;
   border: none;
-  background-color: #333;
-  color: white;
-  font-size: 2rem;
+  background-color: white;
+  color: 333;
+  font-size: 30pt;
+  font-family: 'harry_pregular', 'Cinzel', Arial, Helvetica, sans-serif;
   cursor: pointer;
   position: relative;
   z-index: 1;
@@ -310,6 +312,94 @@ animation:move-clouds-back 200s linear infinite;
   overflow: hidden;
   border-radius: 5px;
 }
+
+.medium-container ul {
+  color: #333;
+  margin: 0 10px;
+  position: inline;
+  display: flex;
+  justify-content: space-between;
+}
+
+.starter-screen .button1 {
+  width: 50px;
+  height: 200px;
+  border-radius: 20px
+}
+
+.button1 img {
+  border: 30px;
+  margin: -9px -40px -5px -40px;
+}
+
+.starter-screen .button2 {
+  width: 50px;
+  height: 200px;
+  border-radius: 20px
+}
+.button2 img {
+  border: 30px;
+  margin: -9px -40px -5px -40px;
+}
+.starter-screen .button3 {
+  width: 50px;
+  height: 200px;
+  border-radius: 20px
+}
+.button3 img {
+  border: 30px;
+  margin: -9px -40px -5px -40px;
+}
+.starter-screen .button4 {
+  width: 50px;
+  height: 200px;
+  border-radius: 20px
+}
+.button4 img {
+  border: 30px;
+  margin: -9px -40px -5px -40px;
+}
+
+/* .button1 {
+  display: inline-block;
+  margin: 0.5rem;
+  border-radius: 100%;
+  background-color: rgb(255, 255, 255, 0.4);
+  border: 5px solid #4284A4;
+  background-repeat: no-repeat;
+} */
+
+/* .button1:before, .button1:after,
+.button2:before, .button2:after,
+.button3:before, .button3:after,
+.button4:before, .button4:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 51%;
+  height: 100%;
+  top: 0;
+  background-color: rgb(255, 255, 0);
+  transition: 0.4s ease-out all;
+} */
+
+.button1, .button2, .button3, .button4 {
+  padding: 10px 20px;
+  border: none;
+  padding: 10px 40px;
+  border: none;
+  background-color: white;
+  color:  #333;
+  font-size: 30pt;
+  font-family: 'harry_pregular', 'Cinzel', Arial, Helvetica, sans-serif;
+  cursor: pointer;
+  position: relative;
+  z-index: 1;
+  transition: 0.4s ease-out all;
+  overflow: hidden;
+  border-radius: 5px;
+}
+
 .button.active {
   background-color: #4284A4;
   color: #333;
@@ -329,7 +419,7 @@ animation:move-clouds-back 200s linear infinite;
   width: 51%;
   height: 100%;
   top: 0;
-  background-color: #4284A4;
+  background-color: rgb(255, 255, 0);
   transition: 0.4s ease-out all;
 }
 .button:before {
@@ -358,16 +448,24 @@ animation:move-clouds-back 200s linear infinite;
   BACKGROUNDS
 ==========================================*/
 .tie {
-  background-color: rgb(41, 85, 228, 0.98);
+  background-color: rgba(0, 0, 0, .98);
+  border-top: 20px solid rgb(240, 197, 38, 0.98);
+  /* background-color: rgb(240, 197, 38, 0.98)
+  rgb(41, 85, 228, 0.98); */
   
 }
 
 .win {
-  background-color: rgb(240, 197, 38, 0.98);
+  background-color: rgba(0, 0, 0, .98);
+  border-top: 20px solid rgb(41, 85, 228, 0.98);
+  /* background-color: rgb(240, 197, 38, 0.98); */
 }
 
 .lose {
-  background-color: rgb(122, 0, 0, 0.98);
+
+  background-color: rgba(0, 0, 0, .98);
+  border-top: 20px solid rgb(122, 0, 0, 0.98);
+  /* border-top: 30px solid rgb(122, 0, 0, 0.98); */
 }
 
 .rock {
@@ -385,10 +483,7 @@ animation:move-clouds-back 200s linear infinite;
 .character1 {
   background-image: url("../../../img/characters/harry-wand.png");
 }
-/* .character1 span:hover {
-  color: white;
-  transition: .5s;
-} */
+
 .character2 {
   background-image: url("../../../img/characters/ron-wand.png");
 }
@@ -420,8 +515,8 @@ html {
 body {
   /* background-color: #358FB9; */
   color: white;
-  font-family: "Open Sans Condensed", sans-serif;
-  font-size: 2rem;
+  font-family: 'Cinzel', sans-serif;
+  font-size: 30pt;
   overflow: hidden;
 }
 body.game-started {
@@ -435,12 +530,15 @@ main {
 }
 
 h2 {
-  font-size: 2.5rem;
-  margin-bottom: 4rem;
+  margin-bottom: 40px;
+  font-family: 'Cinzel', sans-serif;
 }
 
 h3 {
-  margin-bottom: 3rem;
+  font-family: 'Cinzel', sans-serif;
+  font-size: 35px;
+  text-align: center;
+  margin-bottom: 30px;
 }
 
 /*==========================================
@@ -460,32 +558,65 @@ h3 {
 }
 .main-header h1 {
   padding: 30px 0;
+  display: flex;
+  justify-content: center;
 }
 .main-header h1 span {
   display: inline-block;
+  display: flex;
+  justify-content: center;
   margin-right: 10px;
-  font-size: 3rem;
-  -webkit-animation: fade-in-left 0.5s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.5s;
-          animation: fade-in-left 0.5s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.5s;
+  font-size: 93px;
+  -webkit-animation: fade-in-left 0.7s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.7s;
+          animation: fade-in-left 0.7s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.7s;
 }
+
+.main-header h3 {
+  display: inline-block;
+  display: flex;
+  justify-content: center;
+  margin-right: 10px;
+  margin-bottom: 0;
+  font-size: 45px;
+  font-weight: 200pt;
+  font-style: italic;
+  -webkit-animation: fade-in-left 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.9s;
+          animation: fade-in-left 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.9s;
+}
+
+.main-header p {
+  padding: 10px 0 40px 0;
+  display: flex;
+  justify-content: center;
+  font-family: 'Cinzel', sans-serif;
+  font-size: 17pt;
+  text-align: center;
+  -webkit-animation: fade-in-left 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.9s;
+          animation: fade-in-left 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.9s;
+}
+
 .game-started .main-header h1 span {
-  -webkit-animation: scale-text 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.2s;
-          animation: scale-text 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.2s;
+  -webkit-animation: scale-text 1.1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 1s;
+          animation: scale-text 1.1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 1s;
 }
+
 @media only screen and (min-width: 600px) {
   .main-header h1 span {
     font-size: 6rem;
   }
 }
+
 .main-header h1 span:first-child {
   font-family: "harry_pregular", Arial, Helvetica, sans-serif;
-  font-size: 90px;
+  font-size: 93px;
 }
+
 .main-header h1 span:nth-child(2) {
   -webkit-animation-delay: 0.7s;
           animation-delay: 0.7s;
   font-family: "harry_pregular", Arial, Helvetica, sans-serif;
 }
+
 .game-started .main-header h1 span:nth-child(2) {
   -webkit-animation-delay: 0.2s;
           animation-delay: 0.2s;
@@ -511,12 +642,16 @@ h3 {
   font-size: 16pt;
   -webkit-animation: fade-in-left 0.2s ease-out both 1.3s;
           animation: fade-in-left 0.2s ease-out both 1.3s;
-  margin-bottom: 3rem;
+  margin-bottom: 15px;
+}
+.game-started .main-header h3 {
+  -webkit-animation: fade-out-right 0.5s both 1;
+          animation: fade-out-right 0.5s both 1;
 }
 .game-started .intro {
   -webkit-animation: fade-out-right 0.5s both 1;
           animation: fade-out-right 0.5s both 1;
-}
+} 
 
 /*==========================================
     STARTER SCREENS -- THIS SECTION IS THE TROUBLEMAKER
@@ -526,14 +661,29 @@ h3 {
   position: relative;
   width: 100%;
 }
-.starter-screens .button {
+.starter-screens .button1 {
+  background-color: rgb(255, 255, 255, 0.8);
+  color: #333;
+  margin-bottom: 10px;
+}
+.starter-screens .button2 {
+  background-color: rgb(255, 255, 255, 0.8);
+  color: #333;
+  margin-bottom: 10px;
+}
+.starter-screens .button2 {
+  background-color: rgb(255, 255, 255, 0.8);
+  color: #333;
+  margin-bottom: 10px;
+}
+.starter-screens .button4 {
   background-color: rgb(255, 255, 255, 0.8);
   color: #333;
   margin-bottom: 10px;
 }
 .game-started .starter-screens {
-  -webkit-animation: fade-out-right 0.5s both 0.2s;
-          animation: fade-out-right 0.5s both 0.2s;
+  -webkit-animation: fade-out-right 0.5s both 0.5s;
+          animation: fade-out-right 0.5s both 0.5s;
 }
 
 .starter-screen {
@@ -565,9 +715,9 @@ h3 {
 }
 
 .start {
-  -webkit-animation: fade-in-left 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 1.4s;
-          animation: fade-in-left 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 1.4s;
-  text-align: left;
+  -webkit-animation: fade-in-left 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.9s;
+    animation: fade-in-left 1s cubic-bezier(0.46, -0.41, 0.3, 1.52) both 0.9s;
+  text-align: center;
 }
 
 .choose-character li,
@@ -577,13 +727,6 @@ h3 {
   width: 10rem;
   height: 10rem;
 }
-
-/* span > .character1 {
-  height: 30px;
-  width: 100px;
-  font-size: 15px;
-  color: white;
-} */
 
 @media only screen and (min-width: 800px) {
   .choose-character li,
@@ -655,6 +798,7 @@ h3 {
   background-position: center;
   background-size: 70%;
 }
+
 
 /*==========================================
   ARENA/PLAY
@@ -851,8 +995,8 @@ h3 {
   width: 10rem;
   height: 10rem;
   display: inline-block;
-  background-position: bottom -0.5rem center;
-  background-size: 60%;
+  background-position: bottom 25px center;
+  background-size: 75%;
 }
 @media only screen and (min-width: 1200px) {
   .computer-choice-icon,
@@ -873,6 +1017,7 @@ h3 {
   justify-content: space-between;
   align-items: center;
   color: #333;
+  
 }
 .players span {
   font-size: 2rem;
@@ -945,7 +1090,10 @@ h3 {
 /*BUTTON*/
 
 body {
-  width: 100%;
+  background-color: #78d1dc;
+  color: white;
+  font-family: "Open Sans Condensed", sans-serif;
+  font-size: 2rem;
   overflow: hidden;
 }
 a { color: #CCC }
