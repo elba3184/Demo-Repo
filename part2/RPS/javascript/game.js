@@ -494,13 +494,13 @@ var gameModule = (function () {
               overallWinner();
               console.log(overallWinner());
               if(overallResultClass == 'win'){
-                document.getElementById('modal-type').innerHTML += `<p>Good job! You won!</p><a href='../../../part3/index3.html'> Finish </a>`
+                document.getElementById('modal-type').innerHTML += `<p>Good job! You won!</p><a href='../part3/part3.html'> Finish </a>`
               }
               else if(overallResultClass == 'lose'){
-                document.getElementById('modal-type').innerHTML += `<p>Oh no! You lost!</p><a href='../../../part3/index3.html'> Finish </a>`
+                document.getElementById('modal-type').innerHTML += `<p>Oh no! You lost!</p><a href='../part3/part3.html'> Finish </a>`
               }
               else{
-                document.getElementById('modal-type').innerHTML += `<p>You tied with the computer!</p><a href='../../../part3/index3.html'> Finish </a>`
+                document.getElementById('modal-type').innerHTML += `<p>You tied with the computer!</p><a href='../part3/part3.html'> Finish </a>`
               }
               document.getElementById('modal-type').className = `modal-content ${overallResultClass}-result`
               setTimeout(function() { 
