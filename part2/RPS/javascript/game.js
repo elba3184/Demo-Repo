@@ -194,12 +194,42 @@ var gameModule = (function () {
             character,
             choices = ['rock', 'paper', "scissors"];
             // users = ['Harry', 'Ron', 'Hermione'];
-            // villians = ['Voldemort', 'Bellatrix', 'Lucius Malfoy']
+            // villians = ['Voldemort', 'Bellatrix', 'Lucius Malfoy'];
             // index = 0;
+           // Set what character is chosen and start the game
+           let user = "";
+         userChar = $('.choose-character li').on('click', function(e) {
 
-        // Text Variables
+          e.preventDefault();
+          user = setCharacter($(this), '.player-character');
+          nextScreen($(this));
+          return console.log(user);
+      });
+
+      let villian =  "";
+      // Set what character is chosen and start the game
+      villianChar = $('.choose-rival li').on('click', function(e) {
+
+          e.preventDefault();
+          villian = setCharacter($(this), '.computer-character');
+          $('body').addClass('game-started');
+          return console.log(villian);
+      });
+
+      // let charName = "";
+      // for (let i = 0; i < userChar.length; i++) {
+      //   console.log("Each character ", userChar[i].innerText);
+      //   charName = userChar[i].innerText;
+      // }
+
+      // let villName = "";
+      // for (let i = 0; i < villianChar.length; i++) {
+      //   console.log("Each character ", villianChar[i].innerText);
+      //   villName = villianChar[i].innerText;
+      // }
+
         var playerWinsText = `You win the round!`,
-            computerWinsText = `Computer wins the round!`,
+            computerWinsText = `Villian wins the round!`,
             tieText = "It's a Tie!",
             overallPlayerWinText = "<h2>Well Done!</h2> <p>You won against the computer!</p>",
             overallComputerWinText = "<h2>You Lose...</h2> <p>The computer has defeated you!</p>",
@@ -438,24 +468,6 @@ var gameModule = (function () {
             e.preventDefault();
             setBestOf($(this));
             nextScreen($(this));
-
-        });
-
-        // Set what character is chosen and start the game
-        $('.choose-character li').on('click', function(e) {
-
-            e.preventDefault();
-            setCharacter($(this), '.player-character');
-            nextScreen($(this));
-
-        });
-
-        // Set what character is chosen and start the game
-        $('.choose-rival li').on('click', function(e) {
-
-            e.preventDefault();
-            setCharacter($(this), '.computer-character');
-            $('body').addClass('game-started');
 
         });
 

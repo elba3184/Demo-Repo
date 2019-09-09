@@ -291,9 +291,10 @@ animation:move-clouds-back 200s linear infinite;
   display: inline-block;
   margin: 0.5rem;
   border-radius: 100%;
-  background-color: rgb(255, 255, 255, 0.4);
+  background-color: rgb(255, 255, 255, 0.6);
   /* border: 5px solid #4284A4; */
   background-repeat: no-repeat;
+  z-index: 5;
 }
 
 .button {
@@ -449,7 +450,7 @@ animation:move-clouds-back 200s linear infinite;
 ==========================================*/
 .tie {
   background-color: rgba(0, 0, 0, .98);
-  border-top: 20px solid rgb(240, 197, 38, 0.98);
+  border-top: 30px solid rgb(240, 197, 38, 0.98);
   /* background-color: rgb(240, 197, 38, 0.98)
   rgb(41, 85, 228, 0.98); */
   
@@ -457,14 +458,14 @@ animation:move-clouds-back 200s linear infinite;
 
 .win {
   background-color: rgba(0, 0, 0, .98);
-  border-top: 20px solid rgb(41, 85, 228, 0.98);
+  border-top: 30px solid rgb(41, 85, 228, 0.98);
   /* background-color: rgb(240, 197, 38, 0.98); */
 }
 
 .lose {
 
   background-color: rgba(0, 0, 0, .98);
-  border-top: 20px solid rgb(122, 0, 0, 0.98);
+  border-top: 30px solid rgb(122, 0, 0, 0.98);
   /* border-top: 30px solid rgb(122, 0, 0, 0.98); */
 }
 
@@ -1017,7 +1018,6 @@ h3 {
   justify-content: space-between;
   align-items: center;
   color: #333;
-  
 }
 .players span {
   font-size: 2rem;

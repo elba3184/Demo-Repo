@@ -192,7 +192,7 @@ window.onload = function () {
         //Check if player reached the end
         function endGoal(){
             if(checkCollision(player, battle)){
-                window.open('RPS/html/rps.html', '_self');
+                window.open('part3/part3.html', '_self');
                 //document.querySelector("#myModal").style.display = 'block';
             }
         }
