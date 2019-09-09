@@ -907,7 +907,7 @@ h3 {
   background-color: transparent;
   border: 0;
   transition: .5s;
-  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif; 
+  font-family: 'Cinzel', sans-serif;
   font-size: 15pt;
   display: flex;
   align-items: center;
@@ -1092,7 +1092,7 @@ h3 {
 body {
   background-color: #78d1dc;
   color: white;
-  font-family: "Open Sans Condensed", sans-serif;
+  font-family: 'Cinzel', sans-serif;
   font-size: 2rem;
   overflow: hidden;
 }
