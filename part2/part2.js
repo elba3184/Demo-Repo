@@ -1,5 +1,5 @@
 //VOLDEMORT BATTLE
-
+console.log("Changes");
 let direction = 'right';
 
 window.onload = function () {
